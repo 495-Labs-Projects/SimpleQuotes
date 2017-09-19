@@ -82,7 +82,6 @@ git commit -m 'Base rails app'
 </code></pre>
 </li>
 <li><p>Open up your browser and go to <a href="http://localhost:3000">localhost:3000</a> to view the application.  </p></li>
-<li><p>Click on the "About the application environment" link to confirm all is working properly.</p></li>
 <li><p>Add a <code>/quotes</code> to the end of the URL to get to the main quotes page.</p></li>
 <li><p>Use the web ui to enter in at least three quotes from the <a href="http://67272.cmuis.net/files/67272/famous_quotes.pdf">famous quotes database</a>. Update one quote. Destroy one quote.</p></li>
 <li>
