@@ -206,14 +206,34 @@ Part 2: Model, View, and Controller
 
 1. Open the `Quote` model in `app/models/quote.rb` and add in the method `get_random_quote` below.  
 
+    
     ```ruby
     # Method to get a random quote for home page
     # 
     # @return [Quote]
     #   the random quote 
     def self.get_random_quote
-      self.all.sample
+      self.all.to_a[rand(self.all.length)] 1
     end
+    ```
+1. Run your server and reload a few times to see the ranndom quotes generating. But wait! You should see an error pop up after a few tries. This is a good time to put your ByeBug skills to use to figure out what went wrong. Try your best to figure it out before reading the next line.
+
+1. You might have discovered that the random function is incorrect, since it is generating a random number that might be up to the index of the length, which would be out of bounds. You can quickly fix it as follows if you haven't already.
+
+    ```ruby
+    # Method to get a random quote for home page
+    # 
+    # @return [Quote]
+    #   the random quote 
+    def self.get_random_quote
+      self.all.to_a[rand(self.all.length) - 1] 1
+    end
+    ```
+
+1. What's even better, as it turns out you don't even need to generate the number yourself. In fact, Rails provides us with the useful function select, which gets a random element from a relation. Great! You can just replace the inside of the method with the following:
+
+    ```ruby
+      self.all.sample
     ```
 
   Add in some basic validation by requiring a body for the quote.  The appropriate code would be:
