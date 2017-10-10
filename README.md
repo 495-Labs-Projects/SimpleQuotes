@@ -213,7 +213,7 @@ Part 2: Model, View, and Controller
     # @return [Quote]
     #   the random quote 
     def self.get_random_quote
-      self.all.to_a[rand(self.all.length)] 1
+      self.all.to_a[rand(self.all.length)]
     end
     ```
 1. Run your server and reload a few times to see the ranndom quotes generating. But wait! You should see an error pop up after a few tries. This is a good time to put your ByeBug skills to use to figure out what went wrong. Try your best to figure it out before reading the next line.
@@ -226,7 +226,7 @@ Part 2: Model, View, and Controller
     # @return [Quote]
     #   the random quote 
     def self.get_random_quote
-      self.all.to_a[rand(self.all.length) - 1] 1
+      self.all.to_a[rand(self.all.length) - 1]
     end
     ```
 
