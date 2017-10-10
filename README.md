@@ -12,7 +12,6 @@ Part 1: Getting Started
         git add .
         git commit -m 'Base rails app'
 
-
 1. Checkout a new branch called "quote". We will merge this back into `master` later.
 
         git checkout -b quote
@@ -220,7 +219,7 @@ Part 2: Model, View, and Controller
   Add in some basic validation by requiring a body for the quote.  The appropriate code would be:
   
     ```ruby
-    validates_presence_of :body
+        validates_presence_of :body
     ```
 
 1. Commit all these changes to git.
